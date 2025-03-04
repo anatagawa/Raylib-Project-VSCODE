@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Clean",
+            "type": "process",
+            "command": "c:/raylib/w64devkit/bin/mingw32-make.exe",
+            "args": [
+                "clean",
+                "PROJECT_NAME=Explosion"
+            ],
+            "group": "build",
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Play",
+            "type": "process",
+            "command": "${workspaceFolder}/out/Explosion.exe",
+            "group": "build",
+        },
+        {
+            "label": "(WIN) build release",
+            "type": "shell",
+            "command": "c:/raylib/w64devkit/bin/mingw32-make.exe",
+            "args": [
+                "PROJECT_NAME=Explosion"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "(WIN) build debug",
+            "type": "shell",
+            "command": "c:/raylib/w64devkit/bin/mingw32-make.exe",
+            "args": [
+                "PROJECT_NAME=Explosion",
+                "DEBUGGING=TRUE"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
